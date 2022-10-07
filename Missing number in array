@@ -1,0 +1,10 @@
+Approach:-Find the total sum of array.size()+1 and minus from original array sum.
+int MissingNumber(vector<int>& array, int n) {
+        // Your code goes here
+        int len=array.size()+1;
+        int total=(len)*(len+1)/2;
+        for(int i=0; i<array.size(); i++){
+            total-=array[i];
+        }
+        return total;
+    }
