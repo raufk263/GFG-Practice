@@ -1,0 +1,31 @@
+We have to find the total sum of all possible subarrays.
+Naive Approach:-
+Time Complexity-O(n^3)
+Using three loops find the sum.
+int SubArraySum(int arr[],int n){
+  for(int i=0; i<n; i++){
+    for(int j=i; j<n; j++){
+        for(int k=i; k<=j; k++){
+            sum+=arr[k];
+        }
+     }
+    }
+    return sum;
+  }
+  --------------------------------------------------------------------------------------------------------
+  Approach 2:-
+  Time Complexity- O(n^2)
+  Using two loops:-
+  
+  int SubArraySum(int arr[],int n){
+    for(int i=0; i<n; i++){
+        int temp=0;
+        for(int j=i; j<n; j++){
+            temp+=arr[j];
+            sum+=temp;
+         }
+     }
+     return sum;
+    }
+    
+    ---------------------------------------------------------------------------------------------------------
